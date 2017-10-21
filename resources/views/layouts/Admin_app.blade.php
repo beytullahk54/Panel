@@ -159,7 +159,10 @@
                         </li>
                         <li role="separator" class="divider"></li>
                         <li><a href="#"><i class="ti-user"></i> Profilim</a></li>
-                        <li><a href="#"><i class="fa fa-power-off"></i> Çıkış</a></li>
+                        <li><a href="{{ route('logout') }}" class="waves-effect"  onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Çıkış</a></li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
                     </ul>
                     <!-- /.dropdown-user -->
                 </li>
