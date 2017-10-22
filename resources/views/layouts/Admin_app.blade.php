@@ -33,9 +33,11 @@
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
+
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
+    @yield('Css')
 </head>
 
 <body class="fix-sidebar">
@@ -230,11 +232,18 @@
             </div>
             <!-- .row -->
             <div class="row">
-                <div class="col-md-12">
-                    <div class="white-box">
-                        <h3 class="box-title">Blank Starter page</h3> </div>
+
                     @yield('icerik')
-                </div>
+                    <!--
+                    **ORNEK
+                         <div class="col-md-12">
+                                <div class="white-box">
+                                    <h3 class="box-title">Anasayfa</h3>
+                                    asd
+                                </div>
+                            </div>
+                -->
+
             </div>
             <!-- .row -->
             <!-- .right-sidebar -->
@@ -292,6 +301,8 @@
 <script src="{{ URL::asset('js/waves.js')}}"></script>
 <!-- Custom Theme JavaScript -->
 <script src="{{ URL::asset('js/custom.js')}}"></script>
+@yield('Script')
+
 </body>
 
 </html>
