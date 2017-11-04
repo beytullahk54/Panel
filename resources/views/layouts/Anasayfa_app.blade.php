@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{ URL::asset('anasayfa/assets/css/main.css')}}" />
     <!--[if lte IE 9]><link rel="stylesheet" href="{{ URL::asset('anasayfa/assets/css/ie9.css')}}" /><![endif]-->
     <noscript><link rel="stylesheet" href="{{ URL::asset('anasayfa/assets/css/noscript.css')}}" /></noscript>
+    @yield('Css')
 </head>
 <body>
 
@@ -37,9 +38,8 @@
         </nav>
     </header>
 
+    @yield('icerik')
 
-
-        </article>
 
     </div>
 
@@ -47,8 +47,6 @@
     <footer id="footer">
         <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
     </footer>
-
-</div>
 
 <!-- BG -->
 <div id="bg"></div>
@@ -58,6 +56,6 @@
 <script src="{{ URL::asset('assets/js/skel.min.js')}}"></script>
 <script src="{{ URL::asset('assets/js/util.js')}}"></script>
 <script src="{{ URL::asset('assets/js/main.js')}}"></script>
-
+@yield('Script')
 </body>
 </html>
